@@ -318,4 +318,30 @@
       height: 100%;
     }
   }
- 
+@keyframes drift {
+  100% {transform: translateX(600px)}
+}
+.header__logo {
+ animation: drift 1s ease-in .1s 2 alternate backwards;
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+.banner__text_titled:hover {
+  animation: flash 1s infinite;
+}
+@keyframes rotate {
+  0% { transform: rotate(360deg)}
+}
+.banner__button:hover {
+  animation: rotate 2s ease-in-out .5s 2 alternate backwards;
+}
