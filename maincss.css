@@ -345,3 +345,20 @@
 .banner__button:hover {
   animation: rotate 2s ease-in-out .5s 2 alternate backwards;
 }
+.textline_media {
+  margin : 0 auto;
+  max-width: 980px;
+  margin-top: 20px;
+}
+.media {
+  margin : 0 auto;
+  max-width: 980px;
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.media__video {
+  width: 300px;
+  height: 200px;
+}
