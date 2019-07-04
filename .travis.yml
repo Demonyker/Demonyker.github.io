@@ -1,7 +1,8 @@
 language: node_js
 node_js:
   -  "12.2.0"
-install: npm ci
+scrtipt:
+  -  npm run build
 deploy:
   provider: pages
   skip_cleanup: true
