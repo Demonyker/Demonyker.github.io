@@ -1,9 +1,13 @@
 language: node_js
 node_js:
   -  "12.2.0"
-scrtipt:
-  -  npm build
+script:
+  - npm build
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  local-dir: build
+  target-branch: ci
+  on:
+    branch: gh-pages
