@@ -1,0 +1,154 @@
+@import"../sass/head/header";
+@import"../sass/main/banner";
+@import"../sass/main/news";
+
+@mixin pos($max-width: 1000px, $margin: 20px auto 0) {
+    max-width: $max-width;
+    margin: $margin;
+}
+@mixin font($style: normal, $weight: bold, $size: 14px){
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+}
+.button__next {
+  position: relative;
+  width: 50px;
+  height: 335px;
+  float: right;
+}
+.button__next_arrow {
+  background: url('~../img/arrow-right.png') no-repeat;
+  width: 50px;
+  height: 50px;
+  margin: 150px 0;
+}
+.button__previous {
+  position: relative;
+  width: 50px;
+  height: 335px;
+  float: left;
+}
+.button__previous_arrow {
+  background: url('~../img/arrow-left.png') no-repeat;
+  width: 50px;
+  height: 50px;
+  margin: 150px 0;
+}
+.banner__slide_two, .banner__slide_three {
+  display: none;
+}
+body {
+    font-family: Roboto;
+}
+.prog {
+    width: 100%;
+    background: #9B51E0;
+    height: 10px;
+  }
+
+.textline  {
+    width : 100%;
+    height : 16px;
+    margin-top : 20px;
+    text-align : left;
+    font-style : normal;
+    font-weight : bold;
+    font-size : 14px;
+    line-height : 16px;
+    color : #000000;
+  
+    &_purple{
+        background : #9B51E0;
+    }
+
+    &_yellow {
+        background: #FFC740;
+    }
+
+    &__text {
+        background : #FFFFFF;
+        margin-left : 16px;
+        padding-left: 4px;
+        padding-right: 6px;
+        width : auto;
+        white-space : nowrap;
+        font-style : normal;
+        font-weight : bold;
+        font-size : 14px;
+        line-height : 16px;
+    }
+
+    &_client {
+        margin : 0 auto;
+        max-width: 980px;
+    } 
+    &_media {
+        margin : 0 auto;
+        max-width: 980px;
+        margin-top: 20px;
+    } 
+}
+
+.clients-block {
+    margin : 0 auto;
+    max-width: 980px;
+
+.clients-block__client {
+  padding-left: 40px;
+
+&_htmlc, &_cssc {
+    width: 100px;
+    height: 100px;
+  }
+&_htmlc {
+    margin-bottom: 30px;
+  }
+&_nodec {
+    width: 210px;
+    height: 80px;
+  }
+&_phpc {
+    width: 162px;
+    height: 88px;
+  }
+&_sqlc {
+    width: 140px;
+    height: 72px;
+  }
+ }
+}
+
+.footer{
+    width: 100%;
+    height: 115px;
+    background: #6D3D99;
+  }
+
+.copy{
+    @include font();
+    line-height: 16px;
+  /* identical to box height */
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 49px;
+}
+.media {
+    margin : 0 auto;
+    max-width: 980px;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+   &__video {
+    width: 300px;
+    height: 200px;
+  }
+   &__block_quadrat {
+    border: 1px black solid;
+    background: black;
+    color: red;
+  }
+}

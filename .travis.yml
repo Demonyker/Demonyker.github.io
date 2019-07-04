@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  -  "12.2.0"
+# scrtipt: npm run build
+#env:
+#  -  NODE_ENV="development"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
