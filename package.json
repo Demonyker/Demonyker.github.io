@@ -39,7 +39,8 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "lint": "eslint \"./**/*.js\""
   },
   "author": "",
   "license": "ISC"
