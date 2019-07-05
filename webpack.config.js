@@ -36,4 +36,4 @@ const conf = {
   ],
 };
 
-module.exports = () =>  conf;
+module.exports = () => conf;
