@@ -1,6 +1,4 @@
-const window = Window;
 window.onload = () => {
-  const document = Document;
   const buttonNext = document.getElementsByClassName('button__next_arrow');
   const banners = document.getElementsByClassName('banner');
   const buttonPrevious = document.getElementsByClassName('button__previous_arrow');
@@ -21,4 +19,3 @@ window.onload = () => {
     };
   }
 };
-
