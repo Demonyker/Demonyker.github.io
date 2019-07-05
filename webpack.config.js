@@ -1,4 +1,4 @@
-let path = require('path');
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const conf = {
@@ -36,6 +36,4 @@ const conf = {
   ],
 };
 
-module.exports = (env, options) => {
-  return conf;
-};
+module.exports = () => { return conf };

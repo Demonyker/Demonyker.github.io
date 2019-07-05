@@ -1,3 +1,2 @@
-import './test.js'
-import './style.scss'
-
+import './test';
+import './style.scss';
