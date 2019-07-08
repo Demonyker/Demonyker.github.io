@@ -4,6 +4,7 @@ window.onload = () => {
   const buttonPrevious = document.getElementsByClassName('button__previous_arrow');
   const newsBlocks = document.getElementsByClassName('news__block');
   console.log('vot tak');
+  console.log('trazda');
   if (newsBlocks.length === 1) {
     newsBlocks[0].style.width = '100%';
   }
