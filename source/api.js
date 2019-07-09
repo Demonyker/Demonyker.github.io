@@ -15,6 +15,6 @@ $(document).ready(() => {
     });
   $.getJSON('https://picsum.photos/200',
     (img) => {
-      console.log(img.url);
+      console.log(JSON.parse(img));
     });
 });
