@@ -18,6 +18,7 @@ const conf = {
       {
         test: /\.scss$/,
         use: [
+          'css-hot-loader',
           MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',

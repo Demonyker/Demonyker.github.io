@@ -20,6 +20,7 @@
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
+    "css-hot-loader": "^1.4.4",
     "css-loader": "^3.0.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.1",
@@ -38,7 +39,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --hot --mode development --open"
   },
   "author": "",
   "license": "ISC"
