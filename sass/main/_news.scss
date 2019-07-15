@@ -1,0 +1,117 @@
+@mixin pos($max-width: 1000px, $margin: 20px auto 0) {
+    max-width: $max-width;
+    margin: $margin;
+}
+@mixin font($style: normal, $weight: bold, $size: 14px){
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+}
+.news {
+    @include pos();
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  
+  &__block {
+    width: calc(50% - 10px);
+  }
+
+  @media (max-width: 1200px) {
+    &__block {
+      width: 100%;
+    }
+  }
+  
+  &__text {
+    @include font(normal, normal, 12px);
+    line-height : 14px;
+    text-align : justify;
+    color : #000000;
+    margin-top: 16px;
+    display: flex;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__content_text {
+    margin-top: 0px;
+  }
+ 
+  &__photo {
+    height : 141px;
+    width : 150px;
+    border : #FFC740 solid 2px;
+    box-sizing : border-box;
+    margin-right : 10px;
+    padding : 2px;
+  }
+  &__photo_dog {
+    background : url('../img/sobaka.jpg') no-repeat;
+    background-position : center left;
+    background-size : 112% 112%;
+  }
+  &__underline {
+    text-decoration: underline;
+  }
+  &__photo_steve {
+    background : url('../img/steve.jpg') no-repeat;
+    background-position : -40px;
+    background-size : 179% 100%;
+    }
+  &__photo_mouse {
+    background : url('../img/miw.jpg') no-repeat;
+    background-position : center center;
+    background-size : 130% 110%;
+    }
+  &__photo_girl {
+    background : url('../img/tyan.jpg') no-repeat;
+    background-size : 137% 146%;
+  }
+  &__photo_mini {
+    width : 60px;
+    height : 47px;
+    float : left;
+    margin-right : 10px;
+    }
+  &__photo_car {
+    background : url('../img/car.jpg') no-repeat;
+    background-size : 185% 113%;
+    background-position : -20px -3px;
+  }
+  &__photo_phone{
+    background : url('../img/phone.jpg') no-repeat;
+    background-size : 181% 110%;
+    background-position : center center;
+    }
+  &__photo_bbc {
+    background : url('../img/news.png') no-repeat;
+    background-size : 206% 100%;
+    background-position : center center;
+    }
+  &__resposts {
+    display : block;
+    @include font(normal, normal, 12px);
+    line-height : 14px;
+    text-align : justify;
+    color : #000000;
+    }
+  @media (max-width: 1200px) {
+      &__resposts{
+        width: 100%;
+        height: 100%;
+      }
+    }
+      &__block_mini {
+        width: 31.3%;
+    }
+  @media (max-width: 1200px) {
+    &__block_mini{
+      width: 100%;
+    }
+  }
+}
