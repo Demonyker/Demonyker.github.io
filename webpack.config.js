@@ -1,8 +1,9 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+require('babel-polyfill');
 
 const conf = {
-  entry: './source/index.js',
+  entry: ['babel-polyfill', './source/index.js'],
   output: {
     path: path.resolve(__dirname, './build'),
     filename: 'main.js',

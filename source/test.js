@@ -37,8 +37,9 @@ window.onload = () => {
       xhr.send();
     });
   }
-  promiseAjax().then((jsonString) => {
-    const massiveOftext = JSON.parse(jsonString);
+  async function asyncFunction() {
+    const response = await promiseAjax();
+    const massiveOftext = JSON.parse(response);
     massiveOftext.forEach((text, i) => {
       news.innerHTML =`<div class="news__block"> 
           <div class="textline textline_purple"><span class="textline__text">ABOUT SUPER LOGO</span></div>
@@ -53,7 +54,6 @@ window.onload = () => {
     if (newsBlocks.length % 2 !== 0) {
       newsBlocks[newsBlocks.length - 1].style.width = '100%';
     }
-  }).catch((err) => {
-    console.log(err);
-  });
+  }
+  asyncFunction();
 };
