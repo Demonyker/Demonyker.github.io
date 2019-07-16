@@ -1,3 +1,2 @@
-import './test';
 import './style.scss';
-import './api';
+import './test';
