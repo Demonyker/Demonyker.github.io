@@ -1,0 +1,105 @@
+@mixin pos($max-width: 1000px, $margin: 20px auto 0) {
+    max-width: $max-width;
+    margin: $margin;
+  }
+  @mixin font($style: normal, $weight: bold, $size: 14px){
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+  }
+/*@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}*/
+@keyframes rotate {
+  0% { transform: rotate(360deg)}
+}
+.banner {
+    @include pos();
+    position: relative;
+    height: auto;
+    min-height: 335px;
+    display: flex;
+    justify-content: space-between;
+  
+    &::before { 
+        content: "";
+        position: absolute;
+        width: 100%; height: 100%;
+        background:  url('../img/alps.jpg') no-repeat;
+        filter: brightness(55%);
+        background-position: 0px -180px;
+        background-size: 102% 162%;
+    }
+
+    &__slide_two::before {
+      content: "";
+        position: absolute;
+        width: 100%; height: 100%;
+        background:  url('~../img/gora.jpg') no-repeat;
+        filter: brightness(55%);
+        background-position: 0px -180px;
+        background-size: 102% 162%;
+    }
+    &__slide_three::before {
+      content: "";
+        position: absolute;
+        width: 100%; height: 100%;
+        background:  url('~../img/trava.jpg') no-repeat;
+        filter: brightness(55%);
+        background-position: 0px -180px;
+        background-size: 102% 162%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__text {
+        position : relative;
+        max-width : 450px;
+        @include font();
+        font-weight : normal;
+        line-height : 16px;
+        color : #FFFFFF;
+        margin-left : 44px;
+        padding-top : 6px;
+    }
+
+    &__text_titled {
+        position : relative;
+        max-width : 500px;
+        font-size : 64px;
+        line-height : 75px;
+        color : #FFC740;
+        filter : brightness(100%);
+        margin-bottom: 6px;
+        padding-top : 15px;
+        animation: flash 1s infinite;
+    }
+
+    &__button {
+        position: relative;
+        background: #6D3D99;
+        color: white;
+        margin-left: 44px;
+        margin-bottom: 30px;
+        border: 1px solid #6D3D99;
+        padding: 9px 24px;
+        max-width: 150px;
+        margin-top: 10px;
+        &:hover {
+            animation: rotate 2s ease-in-out .5s 2 alternate backwards;
+        }
+    }
+}
